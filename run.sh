@@ -27,7 +27,7 @@ kubectl config use-context default
 
 # Run kubectl command
 if [[ ! -z ${PLUGIN_KUBECTL} ]]; then
-  kubectl ${PLUGIN_KUBECTL}
+  kubectl --insecure-skip-tls-verify=true ${PLUGIN_KUBECTL}
 fi
 
 # Run helm command
