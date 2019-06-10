@@ -1,0 +1,11 @@
+kind: pipeline
+name: default
+
+steps:
+- name: drone-kubectl-helm
+  image: plugins/docker
+  pull: always
+  settings:
+    registry: localhost:5000
+    repo: localhost:5000/drone-kubectl-helm
+    insecure: true
